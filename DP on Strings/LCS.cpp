@@ -40,6 +40,30 @@ int lcs(string s1, string s2)
 
 	return prev[l2];
 
+    // To print LCS we will traverse the dp matrix and find out which indexes match(store in the answer string)
+    int len=dp[n][m];
+    int i=l1,j=l2;
+
+    int index = len - 1;
+    string str = "";
+    for (int k = 1; k <= len; k++) {
+        str += "$"; // dummy string
+    }
+
+    while (i > 0 && j > 0) {
+        if (s1[i - 1] == s2[j - 1]) {
+            str[index] = s1[i - 1];
+            index--;
+            i--;
+            j--;
+        } 
+        else if (s1[i - 1] > s2[j - 1]) {
+            i--;
+        } 
+        else 
+            j--;
+    }
+    cout << str;
 }
 int main() {
 
