@@ -1,0 +1,10 @@
+In partition dp problems, there will be multiple ways to solve the problem
+We wiil need to solve in the best possible ways
+
+We will be given an array, then we will have to solve the problem in portions
+We can choose partition size on our own
+The partition that yields the best answer will be our answer
+
+// Start with entire block/array
+// try all partitions
+// Return the best possible 2 partitions
